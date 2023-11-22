@@ -11,6 +11,9 @@
     formControlName="content"
     placeholder="Digite um pensamento"
     >
+    <div class="error__msg" *ngIf="form.get('content')?.errors && form.get('content')?.touched">
+      Pensamento é obrigatório!
+    </div>
     <label for="authorship">Autoria ou Fonte</label>
     <input
       type="textarea"
@@ -19,7 +22,14 @@
       formControlName="authorship"
       placeholder="Digite a autoria ou fonte"
     >
-    <label for="model">Selecione o modelo do card</label>
+    <div class="error__msg" *ngIf="form.get('authorship')?.errors?.['required'] && form.get('authorship')?.touched">
+      Autoria é obrigatória!
+    </div>
+    <div class="error__msg" *ngIf="form.get('authorship')?.errors?.['minlength'] && form.get('authorship')?.touched">
+      Autoria precisa ter no mínimo três caracteres!
+    </div>
+
+    <label for="model1">Selecione o modelo do card</label>
     <div class="container-radio">
       <div class="radio-model">
         <label for="model1">
