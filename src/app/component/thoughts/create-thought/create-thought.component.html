@@ -28,6 +28,10 @@
     <div class="error__msg" *ngIf="form.get('authorship')?.errors?.['minlength'] && form.get('authorship')?.touched">
       Autoria precisa ter no mínimo três caracteres!
     </div>
+    <div class="error__msg"
+         *ngIf="form.get('authorship')?.errors?.['smallLetter'] && form.get('authorship')?.touched">
+      Esse campo aceita apenas letras minúsculas!
+    </div>
 
     <label for="model1">Selecione o modelo do card</label>
     <div class="container-radio">
@@ -96,7 +100,7 @@
 
     </div>
     <div class="actions">
-      <button (click)="createThought()" class="button">Salvar</button>
+      <button [ngClass]="enabledButton()" (click)="createThought()" [disabled]="!form.valid">Salvar</button>
       <button (click)="cancelThought()" class="button">Cancelar</button>
     </div>
   </form>
