@@ -12,7 +12,8 @@ export class ThoughtComponent implements OnInit {
     id: 1,
     content: 'I love Angular',
     authorship: 'Dyego',
-    model: 'modelo3'
+    model: 'modelo3',
+    favorite: false
   }
 
   constructor() { }
@@ -25,6 +26,13 @@ export class ThoughtComponent implements OnInit {
       return 'thought-g'
     }
     return 'thought-p'
+  }
+
+  changeIconFavorite(): string {
+    if (!this.thought.favorite) {
+      return 'inativo'
+    }
+    return 'ativo'
   }
 
 }

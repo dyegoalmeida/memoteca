@@ -20,29 +20,6 @@ export class EditThoughtComponent implements OnInit {
     private formBuilder: FormBuilder
   ) { }
 
-  // ngOnInit(): void {
-  //   this.form = this.formBuilder.group({
-  //     thought: ['', Validators.compose([
-  //       Validators.required,
-  //       Validators.pattern(/(.|\s)*\S(.|\s)*/),
-  //
-  //     ])],
-  //     authorship: ['', Validators.compose([
-  //       Validators.required,
-  //       Validators.minLength(3)
-  //     ])],
-  //     model: ['model1']
-  //   });
-  //
-  //   const id = this.route.snapshot.paramMap.get('id');
-  //   this.service.searchById(parseInt(id!)).subscribe((thought)=>{
-  //     console.log(thought);
-  //     this.thought = thought;
-  //   });
-  //
-  //
-  // }
-
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
     this.service.searchById(parseInt(id!)).subscribe((thought: Thought) => {
@@ -57,7 +34,8 @@ export class EditThoughtComponent implements OnInit {
           Validators.required,
           Validators.minLength(3)
         ])],
-        model: [thought.model]
+        model: [thought.model],
+        favorite: [thought.favorite]
       })
 
     })

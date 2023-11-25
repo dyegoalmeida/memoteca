@@ -4,85 +4,99 @@
       "content": "Só perdemos algo, se perdermos a nós mesmos",
       "authorship": "dyego almeida",
       "model": "modelo1",
-      "id": 1
+      "id": 1,
+      "favorite": true
     },
     {
       "content": "adsadsadsdadasd",
       "authorship": "adsadsadasd",
       "model": "modelo2",
-      "id": 2
+      "id": 2,
+      "favorite": true
     },
     {
       "content": "dasdasdsadsad",
       "authorship": "dasdasdsadasdasdsad",
       "model": "modelo2",
-      "id": 3
+      "id": 3,
+      "favorite": true
     },
     {
-      "id": 4,
       "content": "Mudando, pois sou foda!",
       "authorship": "dasdsadasd",
-      "model": "modelo1"
+      "model": "modelo1",
+      "id": 4,
+      "favorite": true
     },
     {
       "content": "dasdasdsad",
       "authorship": "dasdsadasdsad",
       "model": "modelo2",
-      "id": 5
+      "id": 5,
+      "favorite": false
     },
     {
       "content": "dasdsadasd",
       "authorship": "dasdasdasdsad",
       "model": "modelo3",
-      "id": 6
+      "id": 6,
+      "favorite": false
     },
     {
       "content": "dadadads",
       "authorship": "dasdasdasdsad",
       "model": "modelo1",
-      "id": 7
+      "id": 7,
+      "favorite": false
     },
     {
       "content": "dasdasdasdasd",
       "authorship": "dasdasdasdsadsad",
       "model": "modelo2",
-      "id": 8
+      "id": 8,
+      "favorite": false
     },
     {
       "content": "dasdasdsadsad",
       "authorship": "dasdasdsadasdasdsad",
       "model": "modelo2",
-      "id": 9
+      "id": 9,
+      "favorite": false
     },
     {
       "id": 10,
       "content": "Mudando, pois sou foda!",
       "authorship": "dasdsadasd",
-      "model": "modelo1"
+      "model": "modelo1",
+      "favorite": false
     },
     {
       "content": "dasdasdsad",
       "authorship": "dasdsadasdsad",
       "model": "modelo2",
-      "id": 11
+      "id": 11,
+      "favorite": false
     },
     {
       "content": "dasdsadasd",
       "authorship": "dasdasdasdsad",
       "model": "modelo3",
-      "id": 12
+      "id": 12,
+      "favorite": false
     },
     {
       "content": "dadadads",
       "authorship": "dasdasdasdsad",
       "model": "modelo1",
-      "id": 13
+      "id": 13,
+      "favorite": false
     },
     {
       "content": "dasdasdasdasd",
       "authorship": "dasdasdasdsadsad",
       "model": "modelo2",
-      "id": 14
+      "id": 14,
+      "favorite": false
     }
   ]
 }

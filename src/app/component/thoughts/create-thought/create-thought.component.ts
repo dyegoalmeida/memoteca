@@ -30,7 +30,8 @@ export class CreateThoughtComponent implements OnInit {
           Validators.minLength(3),
           smallLettersValidator
         ])],
-        model: ['model1']
+        model: ['model1'],
+        favorite: [false]
     });
   }
   createThought() {
