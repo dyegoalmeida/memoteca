@@ -12,6 +12,7 @@ export class ListThoughtComponent implements OnInit {
   listThoughts: Thought[] = [];
   pageCurrent: number = 1;
   thereAreMoreThoughts: boolean = true;
+  filter: string = '';
 
   constructor(private service: ThoughtService) { }
 
@@ -20,13 +21,13 @@ export class ListThoughtComponent implements OnInit {
    * o componente seja carregado.
    */
   ngOnInit(): void {
-    this.service.list(this.pageCurrent).subscribe((listThoughts) => {
+    this.service.list(this.pageCurrent, this.filter).subscribe((listThoughts) => {
         this.listThoughts = listThoughts;
     });
   }
 
   loadingMoreThoughts() {
-    this.service.list(++this.pageCurrent)
+    this.service.list(++this.pageCurrent, this.filter)
       .subscribe(listThoughts => {
         /**
          * (...) Sintaxe de espalhamento do JS, significa que vamos incrementando
@@ -37,6 +38,15 @@ export class ListThoughtComponent implements OnInit {
           this.thereAreMoreThoughts = false;
         }
     });
+  }
+
+  searchThoughts() {
+    this.thereAreMoreThoughts = true;
+    this.pageCurrent = 1;
+    this.service.list(this.pageCurrent, this.filter)
+      .subscribe(listThoughts => {
+        this.listThoughts = listThoughts;
+      });
   }
 
 }

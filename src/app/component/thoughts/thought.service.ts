@@ -10,12 +10,16 @@ export class ThoughtService {
   private readonly API = 'http://localhost:3000/thoughts';
   constructor(private http: HttpClient) { }
 
-  list(page:  number): Observable<Thought[]>{
+  list(page:  number, filter: string): Observable<Thought[]>{
     const itensByPage = 6;
 
     let params = new HttpParams()
       .set("_page", page)
       .set("_limit", itensByPage)
+
+    if (filter.trim()){
+      params = params.set("q", filter);
+    }
 
     return this.http.get<Thought[]>(this.API, { params });
   }
