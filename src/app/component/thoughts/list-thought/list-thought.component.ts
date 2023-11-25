@@ -11,6 +11,7 @@ export class ListThoughtComponent implements OnInit {
 
   listThoughts: Thought[] = [];
   pageCurrent: number = 1;
+  thereAreMoreThoughts: boolean = true;
 
   constructor(private service: ThoughtService) { }
 
@@ -21,6 +22,20 @@ export class ListThoughtComponent implements OnInit {
   ngOnInit(): void {
     this.service.list(this.pageCurrent).subscribe((listThoughts) => {
         this.listThoughts = listThoughts;
+    });
+  }
+
+  loadingMoreThoughts() {
+    this.service.list(++this.pageCurrent)
+      .subscribe(listThoughts => {
+        /**
+         * (...) Sintaxe de espalhamento do JS, significa que vamos incrementando
+         * os pensamentos que existe e mais os seis que foram carregados a cada página.
+         */
+        this.listThoughts.push(...listThoughts);
+        if (!listThoughts.length) {
+          this.thereAreMoreThoughts = false;
+        }
     });
   }
 
