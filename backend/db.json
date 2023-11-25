@@ -1,16 +1,46 @@
 {
   "thoughts": [
     {
-      "id": 14,
-      "content": "Trabalhe sempre pra você, rende os melhores juros! Né?",
-      "authorship": "Dyego Almeida",
-      "model": "modelo3"
+      "content": "Só perdemos algo, se perdermos a nós mesmos",
+      "authorship": "dyego almeida",
+      "model": "modelo1",
+      "id": 1
     },
     {
-      "content": "Faz o seu e foda-se!",
-      "authorship": "dyego almeida",
+      "content": "adsadsadsdadasd",
+      "authorship": "adsadsadasd",
       "model": "modelo2",
-      "id": 15
+      "id": 2
+    },
+    {
+      "content": "dasdasdsadsad",
+      "authorship": "dasdasdsadasdasdsad",
+      "model": "modelo2",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "content": "Mudando, pois sou foda!",
+      "authorship": "dasdsadasd",
+      "model": "modelo1"
+    },
+    {
+      "content": "dasdasdsad",
+      "authorship": "dasdsadasdsad",
+      "model": "modelo2",
+      "id": 5
+    },
+    {
+      "content": "dasdsadasd",
+      "authorship": "dasdasdasdsad",
+      "model": "modelo3",
+      "id": 6
+    },
+    {
+      "content": "dadadads",
+      "authorship": "dasdasdasdsad",
+      "model": "modelo1",
+      "id": 7
     }
   ]
 }
