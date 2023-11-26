@@ -42,4 +42,9 @@ export class ThoughtService {
     const url = `${this.API}/${id}`;
     return this.http.get<Thought>(url);
   }
+
+  changeFavorite(thought: Thought): Observable<Thought>{
+    thought.favorite = !thought.favorite
+    return this.edit(thought);
+  }
 }
