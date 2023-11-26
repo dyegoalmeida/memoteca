@@ -8,17 +8,21 @@ import {Observable, ObservedValueTupleFromArray} from "rxjs";
 })
 export class ThoughtService {
   private readonly API = 'http://localhost:3000/thoughts';
+  private itensByPage: number = 6;
   constructor(private http: HttpClient) { }
 
-  list(page:  number, filter: string): Observable<Thought[]>{
-    const itensByPage = 6;
+  list(page:  number, filter: string, favorite: boolean): Observable<Thought[]>{
 
     let params = new HttpParams()
       .set("_page", page)
-      .set("_limit", itensByPage)
+      .set("_limit", this.itensByPage)
 
     if (filter.trim()){
       params = params.set("q", filter);
+    }
+
+    if (favorite){
+      params = params.set("favorite", true);
     }
 
     return this.http.get<Thought[]>(this.API, { params });
@@ -47,4 +51,5 @@ export class ThoughtService {
     thought.favorite = !thought.favorite
     return this.edit(thought);
   }
+
 }

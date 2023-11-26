@@ -17,6 +17,8 @@ export class ThoughtComponent implements OnInit {
     favorite: false
   }
 
+  @Input() listFavorite: Thought[] = [];
+
   /**
    * Injetamos o service no construtor
    * @param service
@@ -41,7 +43,9 @@ export class ThoughtComponent implements OnInit {
   }
 
   updateFavorite(){
-    this.service.changeFavorite(this.thought).subscribe();
+    this.service.changeFavorite(this.thought).subscribe(() =>{
+      this.listFavorite.splice(this.listFavorite.indexOf(this.thought), 1);
+    });
   }
 
 }
