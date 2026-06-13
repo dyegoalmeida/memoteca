@@ -4,11 +4,14 @@ Project developed in Alura Angular training.
 
 - Typescript 4.7.2
 - Angular 14.0.0
+- Node 16
+- Angular CLI 14
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
 
 ## Development server
-
+Run `npm install`
+Run `npm install -g @angular/cli@14.2.13`
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## API by JSON-Server
